@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video-Locadora_ExemploMVC-REVIEW", "Video-Locadora_ExemploMVC-REVIEW\Video-Locadora_ExemploMVC-REVIEW.csproj", "{7FD1AFFA-4601-49B6-84AA-AD00FD03CC7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce-Vestuario-REVIEW", "Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW.csproj", "{7FD1AFFA-4601-49B6-84AA-AD00FD03CC7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
