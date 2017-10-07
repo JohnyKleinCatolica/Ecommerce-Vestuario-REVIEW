@@ -26,5 +26,13 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             IEnumerable<Customer> customers = _context.Customers.ToList();
             return View(customers);
         }
-    }
+
+		public ActionResult Details(int id)
+		{
+			IEnumerable<Customer> customers = _context.Customers.ToList();
+			var customer = customers.SingleOrDefault(m => m.Id == id);
+
+			return View(customer);
+		}
+	}
 }

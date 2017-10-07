@@ -1,7 +1,28 @@
-﻿
+﻿@model IEnumerable<Ecommerce_Vestuario_REVIEW.Models.Customer>
+
 @{
-    ViewBag.Title = "Index";
+	ViewBag.Title = "Clientes";
 }
 
-<h2>Index</h2>
+<h2>Lista de Clientes</h2>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Data de Cadastro</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var clothe in Model)
+		{
+			<tr>
+				<th scope="row">@clothe.Id</th>
+				<td>@Html.ActionLink(@clothe.Nome, "Details", new { clothe.Id })</td>
+				<td>@clothe.DataCadastro</td>
+			</tr>
+		}
+	</tbody>
+</table>
 

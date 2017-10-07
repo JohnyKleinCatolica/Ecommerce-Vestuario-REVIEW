@@ -1,7 +1,32 @@
-﻿
+﻿@model IEnumerable<Ecommerce_Vestuario_REVIEW.Models.Clothe>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Roupas";
 }
 
-<h2>Index</h2>
+<h2>Catálogo de Roupas</h2>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Cor</th>
+			<th>Preço</th>
+			<th>Imagem</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var clothe in Model)
+		{
+			<tr>
+				<th scope="row">@clothe.Id</th>
+				<td>@clothe.Nome</td>
+				<td>@clothe.Cor</td>
+				<td>R$ @clothe.Preco,00</td>
+				<td>@clothe.UrlImagem</td>
+			</tr>
+		}
+		</tbody>
+</table>
 
