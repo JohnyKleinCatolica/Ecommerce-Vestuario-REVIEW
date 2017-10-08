@@ -169,3 +169,4 @@ C:\Users\Johny Klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestu
 C:\Users\Johny Klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customer.resources
 C:\Users\Johny Klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customer1.resources
 C:\Users\Johny Klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customer2.resources
+C:\Users\Johny Klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.MembershipType.resources

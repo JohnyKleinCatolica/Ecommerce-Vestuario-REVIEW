@@ -223,12 +223,17 @@
     <Compile Include="Migrations\201710072041154_Customer2.Designer.cs">
       <DependentUpon>201710072041154_Customer2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710081756395_MembershipType.cs" />
+    <Compile Include="Migrations\201710081756395_MembershipType.Designer.cs">
+      <DependentUpon>201710081756395_MembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Clothe.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -322,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710072041154_Customer2.resx">
       <DependentUpon>201710072041154_Customer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710081756395_MembershipType.resx">
+      <DependentUpon>201710081756395_MembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -22,6 +22,7 @@ namespace Ecommerce_Vestuario_REVIEW.Models
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Clothe> Clothes { get; set; }
+		public DbSet<MembershipType> MembershipType { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
