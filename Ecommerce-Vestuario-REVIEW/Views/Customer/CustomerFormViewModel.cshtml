@@ -1,0 +1,31 @@
+﻿@model Ecommerce_Vestuario_REVIEW.ViewModels.CustomerFormViewModel
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Novo Cliente</h2>
+
+@using (Html.BeginForm("Save", "Customers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Nome)
+        @Html.TextBoxFor(m => m.Customer.Nome, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.DataNascimento)
+        @Html.TextBoxFor(m => m.Customer.DataNascimento, "{0: dd/MM/yyyy }", new { @class = "form-control" })
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Customer.InscritroNewletter) Assinar a NewsLetter
+        </label>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId,
+            new SelectList(Model.MembershipType, "Id", "Name"),
+            "Escolha", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+}
