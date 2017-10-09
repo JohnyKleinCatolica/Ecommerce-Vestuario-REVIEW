@@ -6,6 +6,15 @@
 
 <h2>Detalhes do Cliente</h2>
 
+<h3>Informação de Cliente</h3>
 <b>Nome: </b> @Model.Nome <br/>
 <b>CPF: </b> @Model.CPF <br/>
 <b>Nascimento: </b> @Model.DataNascimento <br/>
+<b>Inscrito na Newsletter: </b> @Model.InscritroNewletter
+
+<hr />
+
+<h3>Tipo de Cliente:</h3>
+<b>Cliente Premium: </b> @Model.MembershipType.ClientePremium <br/>
+<b>Desconto: </b> R$ @Model.MembershipType.Desconto,00 <br />
+<b>Duração Desconto: </b> @Model.MembershipType.DuracaoEmMes (meses)

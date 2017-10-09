@@ -30,7 +30,7 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
 
 		public ActionResult Details(int id)
 		{
-			IEnumerable<Customer> customers = _context.Customers.Include(c => c.MembershipType);
+            IEnumerable<Customer> customers = _context.Customers.Include(c => c.MembershipType);
 			var customer = customers.SingleOrDefault(m => m.Id == id);
 
 			return View(customer);

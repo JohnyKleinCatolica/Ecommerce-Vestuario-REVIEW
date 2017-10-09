@@ -7,13 +7,13 @@ namespace Ecommerce_Vestuario_REVIEW.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Customer1 : IMigrationMetadata
+    public sealed partial class Customers : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Customer1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Customers));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710072039116_Customer1"; }
+            get { return "201710082314351_Customers"; }
         }
         
         string IMigrationMetadata.Source

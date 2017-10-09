@@ -3,7 +3,7 @@ namespace Ecommerce_Vestuario_REVIEW.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MembershipType : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {

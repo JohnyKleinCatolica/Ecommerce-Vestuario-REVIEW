@@ -7,13 +7,13 @@ namespace Ecommerce_Vestuario_REVIEW.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Clothes : IMigrationMetadata
+    public sealed partial class ClothesMigrations : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Clothes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ClothesMigrations));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710071922265_Clothes"; }
+            get { return "201710082252199_Clothes-Migrations"; }
         }
         
         string IMigrationMetadata.Source

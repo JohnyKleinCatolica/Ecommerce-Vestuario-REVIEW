@@ -203,29 +203,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710040047504_Initial-Migration.cs" />
-    <Compile Include="Migrations\201710040047504_Initial-Migration.Designer.cs">
-      <DependentUpon>201710040047504_Initial-Migration.cs</DependentUpon>
+    <Compile Include="Migrations\201710082243119_Initial-Migration.cs" />
+    <Compile Include="Migrations\201710082243119_Initial-Migration.Designer.cs">
+      <DependentUpon>201710082243119_Initial-Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710071922265_Clothes.cs" />
-    <Compile Include="Migrations\201710071922265_Clothes.Designer.cs">
-      <DependentUpon>201710071922265_Clothes.cs</DependentUpon>
+    <Compile Include="Migrations\201710082252199_Clothes-Migrations.cs" />
+    <Compile Include="Migrations\201710082252199_Clothes-Migrations.Designer.cs">
+      <DependentUpon>201710082252199_Clothes-Migrations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710072031331_Customer.cs" />
-    <Compile Include="Migrations\201710072031331_Customer.Designer.cs">
-      <DependentUpon>201710072031331_Customer.cs</DependentUpon>
+    <Compile Include="Migrations\201710082255230_MembershipTypes.cs" />
+    <Compile Include="Migrations\201710082255230_MembershipTypes.Designer.cs">
+      <DependentUpon>201710082255230_MembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710072039116_Customer1.cs" />
-    <Compile Include="Migrations\201710072039116_Customer1.Designer.cs">
-      <DependentUpon>201710072039116_Customer1.cs</DependentUpon>
+    <Compile Include="Migrations\201710082310232_MembershipTypes1.cs" />
+    <Compile Include="Migrations\201710082310232_MembershipTypes1.Designer.cs">
+      <DependentUpon>201710082310232_MembershipTypes1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710072041154_Customer2.cs" />
-    <Compile Include="Migrations\201710072041154_Customer2.Designer.cs">
-      <DependentUpon>201710072041154_Customer2.cs</DependentUpon>
+    <Compile Include="Migrations\201710082314351_Customers.cs" />
+    <Compile Include="Migrations\201710082314351_Customers.Designer.cs">
+      <DependentUpon>201710082314351_Customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710081756395_MembershipType.cs" />
-    <Compile Include="Migrations\201710081756395_MembershipType.Designer.cs">
-      <DependentUpon>201710081756395_MembershipType.cs</DependentUpon>
+    <Compile Include="Migrations\201710082334495_Customers1.cs" />
+    <Compile Include="Migrations\201710082334495_Customers1.Designer.cs">
+      <DependentUpon>201710082334495_Customers1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -313,23 +313,23 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710040047504_Initial-Migration.resx">
-      <DependentUpon>201710040047504_Initial-Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710082243119_Initial-Migration.resx">
+      <DependentUpon>201710082243119_Initial-Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710071922265_Clothes.resx">
-      <DependentUpon>201710071922265_Clothes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710082252199_Clothes-Migrations.resx">
+      <DependentUpon>201710082252199_Clothes-Migrations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710072031331_Customer.resx">
-      <DependentUpon>201710072031331_Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710082255230_MembershipTypes.resx">
+      <DependentUpon>201710082255230_MembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710072039116_Customer1.resx">
-      <DependentUpon>201710072039116_Customer1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710082310232_MembershipTypes1.resx">
+      <DependentUpon>201710082310232_MembershipTypes1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710072041154_Customer2.resx">
-      <DependentUpon>201710072041154_Customer2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710082314351_Customers.resx">
+      <DependentUpon>201710082314351_Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710081756395_MembershipType.resx">
-      <DependentUpon>201710081756395_MembershipType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710082334495_Customers1.resx">
+      <DependentUpon>201710082334495_Customers1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
