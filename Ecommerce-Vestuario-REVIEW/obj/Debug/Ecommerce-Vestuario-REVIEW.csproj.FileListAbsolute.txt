@@ -259,3 +259,9 @@ C:\Users\JohnyKlein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestua
 C:\Users\JohnyKlein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customers.resources
 C:\Users\JohnyKlein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customers1.resources
 C:\Users\JohnyKlein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce-Vestuario-REVIEW.csprojResolveAssemblyReference.cache
+C:\Users\johny.klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce-Vestuario-REVIEW.csprojResolveAssemblyReference.cache
+C:\Users\johny.klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.ClothesMigrations.resources
+C:\Users\johny.klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.MembershipTypes.resources
+C:\Users\johny.klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.MembershipTypes1.resources
+C:\Users\johny.klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customers.resources
+C:\Users\johny.klein\Documents\GitHub\Ecommerce-Vestuario-REVIEW\Ecommerce-Vestuario-REVIEW\obj\Debug\Ecommerce_Vestuario_REVIEW.Migrations.Customers1.resources

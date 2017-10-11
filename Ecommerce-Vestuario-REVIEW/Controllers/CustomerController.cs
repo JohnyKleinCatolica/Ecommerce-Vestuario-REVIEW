@@ -43,22 +43,42 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             var membershipTypes = _context.MembershipType.ToList();
             var viewModel = new CustomerFormViewModel
             {
-                MembershipType = membershipTypes
+                MembershipTypes = membershipTypes
             };
 
-            return View("CustomerForm", viewModel);
+            return View("Edit", viewModel);
         }
 
         [HttpPost] // só será acessada com POST
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer) // recebemos um cliente
         {
-            // armazena o cliente em memória
-            _context.Customers.Add(customer);
-            // faz a persistência
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipType.ToList()
+                };
+
+                return View("Edit", viewModel);
+            }
+
+            if (customer.Id == 0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+
+                customerInDb.Nome = customer.Nome;
+                customerInDb.InscritroNewletter = customer.InscritroNewletter;
+                customerInDb.MembershipType = customer.MembershipType;
+            }
             _context.SaveChanges();
-            // Voltamos para a lista de clientes
-            return RedirectToAction("Index");
+
+            return RedirectToAction("Index", "Customer");
         }
+    
 
         public ActionResult Edit(int id)
         {
@@ -70,10 +90,10 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             var viewModel = new CustomerFormViewModel
             {
                 Customer = customer,
-                MembershipType = _context.MembershipType.ToList()
+                MembershipTypes = _context.MembershipType.ToList()
             };
 
-            return View("CustomerForm", viewModel);
+            return View(viewModel);
         }
     }
 }

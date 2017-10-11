@@ -1,0 +1,53 @@
+﻿@model Ecommerce_Vestuario_REVIEW.ViewModels.CustomerFormViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Customer</h2>
+
+@using (Html.BeginForm("Save", "Customer"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Nome)
+        @Html.TextBoxFor(m => m.Customer.Nome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.Nome)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Nome"), "Selecione um tipo", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.DataNascimento)
+        @Html.TextBoxFor(m => m.Customer.DataNascimento, "{0: dd/MM/yyyy }", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.DataNascimento)
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Customer.InscritroNewletter) Subscribed to Newsletter?
+        </label>
+    </div>
+
+    @Html.HiddenFor(m => m.Customer.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(function () {
+            $.validator.methods.date = function (value, element) {
+                Globalize.culture("pt-BR                                                                                                                                                                 m         ");
+                // you can alternatively pass the culture to parseDate instead of
+                // setting the culture above, like so:
+                // parseDate(value, null, "en-AU")
+                return this.optional(element) || Globalize.parseDate(value) !== null;
+            }
+        });
+    </script>
+}
+
