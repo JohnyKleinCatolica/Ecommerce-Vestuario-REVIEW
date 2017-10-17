@@ -25,18 +25,19 @@
 				<th scope="row">@clothe.Id</th>
 				<td>@Html.ActionLink(@clothe.Nome, "Details", new { clothe.Id })</td>
 				<td>@clothe.DataCadastro</td>
+                <td>@Html.ActionLink("Editar", "Edit", new { clothe.Id}, new {@class = "btn btn-primary" })</td>
 			</tr>
 		}
 	</tbody>
 </table>
 
-@section scripts
+@*@section scripts
 {
     <script>
         $(document).ready(function () {
-            var table = $("#customers").DataTable({
+            var table = $("#customer").DataTable({
                 ajax: {
-                    url: "/api/customers",
+                    url: "/api/customer",
                     dataSrc: ""
                 },
                 columns: [
@@ -78,6 +79,6 @@
            });
     
     </script>
-}
+}*@
        
 
