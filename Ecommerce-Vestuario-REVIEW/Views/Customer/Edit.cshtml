@@ -8,7 +8,12 @@
 
 @using (Html.BeginForm("Save", "Customer"))
 {
-    @Html.ValidationSummary(true, "Please fix the following errors.")
+    //Token
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Customer.Id);
+
+    @Html.ValidationSummary(true, "Por favor preencha todos os campos.")
+
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Nome)
         @Html.TextBoxFor(m => m.Customer.Nome, new { @class = "form-control" })
@@ -23,6 +28,16 @@
         @Html.LabelFor(m => m.Customer.DataNascimento)
         @Html.TextBoxFor(m => m.Customer.DataNascimento, "{0: dd/MM/yyyy }", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Customer.DataNascimento)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.DataCadastro)
+        @Html.TextBoxFor(m => m.Customer.DataCadastro, "{0: dd/MM/yyyy }", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.DataCadastro)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.CPF)
+        @Html.TextBoxFor(m => m.Customer.CPF, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.CPF)
     </div>
     <div class="checkbox">
         <label>

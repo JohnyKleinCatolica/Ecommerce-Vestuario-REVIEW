@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
-using Ecommerce_Vestuario_REVIEW.Models;
 using Ecommerce_Vestuario_REVIEW.ViewModels;
 
 namespace Ecommerce_Vestuario_REVIEW.Controllers
@@ -43,6 +42,7 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             var membershipTypes = _context.MembershipType.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
 
@@ -72,11 +72,14 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
 
                 customerInDb.Nome = customer.Nome;
                 customerInDb.InscritroNewletter = customer.InscritroNewletter;
-                customerInDb.MembershipType = customer.MembershipType;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.CPF = customer.CPF;
+                customerInDb.DataCadastro = customer.DataCadastro;
+                customerInDb.DataNascimento = customer.DataNascimento;
             }
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Customer");
+            return RedirectToAction("Index");
         }
     
 

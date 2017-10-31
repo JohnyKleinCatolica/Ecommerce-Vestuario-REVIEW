@@ -227,6 +227,22 @@
     <Compile Include="Migrations\201710082334495_Customers1.Designer.cs">
       <DependentUpon>201710082334495_Customers1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710172239172_SetDatasCustomerNullable.cs" />
+    <Compile Include="Migrations\201710172239172_SetDatasCustomerNullable.Designer.cs">
+      <DependentUpon>201710172239172_SetDatasCustomerNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710172251148_RequiredNome.cs" />
+    <Compile Include="Migrations\201710172251148_RequiredNome.Designer.cs">
+      <DependentUpon>201710172251148_RequiredNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710172331151_RequiredSimpleDatas.cs" />
+    <Compile Include="Migrations\201710172331151_RequiredSimpleDatas.Designer.cs">
+      <DependentUpon>201710172331151_RequiredSimpleDatas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710172334060_RequiredSimpleCPF.cs" />
+    <Compile Include="Migrations\201710172334060_RequiredSimpleCPF.Designer.cs">
+      <DependentUpon>201710172334060_RequiredSimpleCPF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Clothe.cs" />
@@ -332,6 +348,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710082334495_Customers1.resx">
       <DependentUpon>201710082334495_Customers1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710172239172_SetDatasCustomerNullable.resx">
+      <DependentUpon>201710172239172_SetDatasCustomerNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710172251148_RequiredNome.resx">
+      <DependentUpon>201710172251148_RequiredNome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710172331151_RequiredSimpleDatas.resx">
+      <DependentUpon>201710172331151_RequiredSimpleDatas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710172334060_RequiredSimpleCPF.resx">
+      <DependentUpon>201710172334060_RequiredSimpleCPF.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
