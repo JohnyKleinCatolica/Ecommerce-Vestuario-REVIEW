@@ -18,7 +18,7 @@ namespace Ecommerce_Vestuario_REVIEW.Models
 		public bool InscritroNewletter { get; set; }
         [Required]
         public DateTime? DataNascimento { get; set; }
-        [Required]
+        [ValidateDataCadastro]
         public DateTime? DataCadastro { get; set; }
 
 		public MembershipType MembershipType { get; set; } //Propriedade de navegação

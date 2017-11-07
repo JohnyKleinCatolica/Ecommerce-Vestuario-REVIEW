@@ -50,7 +50,7 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
         }
 
         [HttpPost] // só será acessada com POST
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer) // recebemos um cliente
         {
             if (!ModelState.IsValid)
