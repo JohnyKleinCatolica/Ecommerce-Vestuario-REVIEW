@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Ecommerce_Vestuario_REVIEW.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Ecommerce_Vestuario_REVIEW.Controllers
 {
@@ -155,14 +156,14 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    //Temporário
+                    var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+                    var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    await roleManager.CreateAsync(new IdentityRole("Administrador"));
+                    await UserManager.AddToRoleAsync(user.Id, "Administrador");
 
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+              
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

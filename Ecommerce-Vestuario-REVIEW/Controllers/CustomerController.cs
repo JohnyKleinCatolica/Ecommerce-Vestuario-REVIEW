@@ -9,6 +9,7 @@ using Ecommerce_Vestuario_REVIEW.ViewModels;
 
 namespace Ecommerce_Vestuario_REVIEW.Controllers
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         private ApplicationDbContext _context;

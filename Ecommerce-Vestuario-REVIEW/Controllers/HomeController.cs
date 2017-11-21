@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Ecommerce_Vestuario_REVIEW.Controllers
 {
+    [AllowAnonymous]//Permite acesso anônimo
     public class HomeController : Controller
     {
         public ActionResult Index()
