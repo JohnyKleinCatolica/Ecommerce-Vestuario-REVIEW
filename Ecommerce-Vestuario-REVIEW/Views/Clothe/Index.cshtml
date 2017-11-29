@@ -6,43 +6,25 @@
 
 <h2>Catálogo de Roupas</h2>
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Cor</th>
-            <th>Preço</th>
-            <th>Imagem</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var clothe in Model)
-        {
-            <tr>
-                <th scope="row">@clothe.Id</th>
-                <td>@clothe.Nome</td>
-                <td>@clothe.Cor</td>
-                <td>R$ @clothe.Preco,00</td>
-                <td>@clothe.UrlImagem</td>
-            </tr>}
-    </tbody>
-</table>
 
-@foreach (var clothe in Model)
-{
-    <div class="row">
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src="..." alt="...">
-            </a>
-        </div>
-        @clothe.Id
-        @clothe.Nome
-        @clothe.Cor
-        R$ @clothe.Preco,00 
-        @clothe.UrlImagem
-    </div>
-}
+ <div class="row">
+    @foreach (var clothe in Model) { 
+            <div class="col-xs-6 col-md-4">
+                <h1>@clothe.Nome</h1>
+                <a href="#" class="thumbnail">
+                    <img src=@clothe.UrlImagem alt="Foto do produto"/>
+                </a>
+
+                <div class="caption">
+                    <p class="descricaoRegistro">
+                        <span><b>Referência:</b> @clothe.Id</span>
+                        <span><b>Cor:</b> @clothe.Cor</span>
+                        <span><b>Valor:</b> R$ @clothe.Preco,00</span>
+                    </p>
+                </div>
+            </div>
+    }
+</div>
+
 
 

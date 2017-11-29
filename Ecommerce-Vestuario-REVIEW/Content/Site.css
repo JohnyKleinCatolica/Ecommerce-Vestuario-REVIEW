@@ -30,3 +30,11 @@ textarea {
 .input-validation-error {
     border: 2px solid red !important;
 }
+
+.descricaoRegistro span {
+    display: block;
+}
+
+.descricaoRegistro span:nth-child(3) {
+    font-size: 150%;
+}

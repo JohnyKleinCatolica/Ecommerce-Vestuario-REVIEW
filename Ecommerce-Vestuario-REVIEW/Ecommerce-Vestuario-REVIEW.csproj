@@ -253,10 +253,6 @@
     <Compile Include="Migrations\201711072333328_customer-required.Designer.cs">
       <DependentUpon>201711072333328_customer-required.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711212240232_createUsers.cs" />
-    <Compile Include="Migrations\201711212240232_createUsers.Designer.cs">
-      <DependentUpon>201711212240232_createUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Clothe.cs" />
@@ -337,6 +333,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\ReadOnlyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -385,9 +382,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711072333328_customer-required.resx">
       <DependentUpon>201711072333328_customer-required.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711212240232_createUsers.resx">
-      <DependentUpon>201711212240232_createUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

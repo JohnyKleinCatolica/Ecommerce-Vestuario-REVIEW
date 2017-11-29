@@ -6,10 +6,6 @@
 
 <h2>Lista de Clientes</h2>
 
-<p>
-    @Html.ActionLink("New Customer", "New", null, new { @class = "btn btn-primary" })
-</p>
-
 <table class="table table-hover" id="customers">
 	<thead>
 		<tr>
@@ -21,18 +17,21 @@
 	<tbody>
 		@foreach (var customer in Model)
 		{
-			<tr>
+			<tr class="col-xs-12">
 				<th scope="row">@customer.Id</th>
 				<td>@Html.ActionLink(@customer.Nome, "Details", new { customer.Id })</td>
 				<td>@customer.DataCadastro</td>
-                <td>@Html.ActionLink("Editar", "Edit", new { customer.Id}, new {@class = "btn btn-primary" })</td>
-                <td>
-                    <button data-customer-id=@customer.Id class="btn-link js-delete">Deletar</button>
-                </td>
+                <td class="col-xs-1">@Html.ActionLink("Editar", "Edit", new { customer.Id}, new {@class = "glyphicon glyphicon-edit" })</td>
+                <td class="col-xs-1"><span data-customer-id=@customer.Id class="js-delete btn-link glyphicon glyphicon-remove">Remover</span></td>
 			</tr>
 		}
 	</tbody>
 </table>
+
+
+<p>
+    @Html.ActionLink("Criar Novo Usuário", "New", null, new { @class = "btn btn-primary" })
+</p>
 
 @section scripts
 {

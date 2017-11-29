@@ -9,7 +9,7 @@ using Ecommerce_Vestuario_REVIEW.ViewModels;
 
 namespace Ecommerce_Vestuario_REVIEW.Controllers
 {
-    [Authorize]
+   
     public class CustomerController : Controller
     {
         private ApplicationDbContext _context;
@@ -24,13 +24,30 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             _context.Dispose();
         }
 
+        [AllowAnonymous]
         public ActionResult Index()
         {
             IEnumerable<Customer> customers = _context.Customers.Include(c => c.MembershipType).ToList();
+
+            if (User.IsInRole("Administrador")) { 
+                return View(customers);
+            }
+            else
+            {
+                return View("ReadOnlyIndex", customers);
+            }           
+        }
+
+        [AllowAnonymous]
+        public ActionResult ReadOnlyIndex()
+        {
+            IEnumerable<Customer> customers = _context.Customers.Include(c => c.MembershipType).ToList();
+
             return View(customers);
         }
 
-		public ActionResult Details(int id)
+        [AllowAnonymous]
+        public ActionResult Details(int id)
 		{
             IEnumerable<Customer> customers = _context.Customers.Include(c => c.MembershipType);
 			var customer = customers.SingleOrDefault(m => m.Id == id);
@@ -38,6 +55,7 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
 			return View(customer);
 		}
 
+        [Authorize(Roles = "Administrador")]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipType.ToList();
@@ -50,6 +68,7 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             return View("Edit", viewModel);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPost] // só será acessada com POST
         //[ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer) // recebemos um cliente
@@ -82,8 +101,8 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
 
             return RedirectToAction("Index");
         }
-    
 
+        [Authorize(Roles = "Administrador")]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -100,6 +119,7 @@ namespace Ecommerce_Vestuario_REVIEW.Controllers
             return View(viewModel);
         }
 
+        [Authorize(Roles = "Administrador")]
         public ActionResult Delete(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
