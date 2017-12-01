@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Ecommerce_Vestuario_REVIEW.Models.Accessories>
+
+@{
+    ViewBag.Title = "Acessórios";
+}
+
+<h2>Acessórios</h2>
+
+
+<div class="row">
+    @foreach (var acessorios in Model)
+    {
+        <div class="col-xs-6 col-md-4">
+            <h1>@acessorios.Nome</h1>
+            <a href="#" class="thumbnail">
+                <img src=@acessorios.UrlImagem alt="Foto do produto" />
+            </a>
+
+            <div class="caption" id="acessorios">
+                <p class="descricaoRegistro">
+                    <span><b>Referência:</b> @acessorios.Id</span>
+                    <span><b>Cor:</b> @acessorios.Cor</span>
+                    <span><b>Valor:</b> R$ @acessorios.Preco,00</span>
+                    @Html.ActionLink("Editar", "Edit", new { acessorios.Id }, new { @class = "glyphicon glyphicon-edit" })
+                    <span data-customer-id=@acessorios.Id class="js-delete btn-link glyphicon glyphicon-remove">Remover</span>
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
+
+@section scripts
+{
+    <script>
+
+        $("#acessorios").on("click", ".js-delete",
+           function () {
+               var button = $(this);
+               bootbox.confirm("Tem certeza que quer exluir o registro?", function (result) {
+                   if (result) {
+                       $.ajax({
+                           url: "/customer/delete/" + button.attr("data-customer-id"),
+                           method: "GET",
+                           success: function () {
+                               button.parents("tr").remove();
+                           }
+                       });
+                   }
+               });
+           });
+
+    </script>
+}
+
+
+
+
+
+
+
+
+
+

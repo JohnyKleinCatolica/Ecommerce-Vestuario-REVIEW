@@ -197,11 +197,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccessoriesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClotheController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -253,13 +255,23 @@
     <Compile Include="Migrations\201711072333328_customer-required.Designer.cs">
       <DependentUpon>201711072333328_customer-required.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712012125559_tables-Accessories-and-shoes.cs" />
+    <Compile Include="Migrations\201712012125559_tables-Accessories-and-shoes.Designer.cs">
+      <DependentUpon>201712012125559_tables-Accessories-and-shoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712012149349_shoestype.cs" />
+    <Compile Include="Migrations\201712012149349_shoestype.Designer.cs">
+      <DependentUpon>201712012149349_shoestype.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Accessories.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Clothe.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Shoes.cs" />
     <Compile Include="Models\ValidateDataCadastro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -334,6 +346,8 @@
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Customer\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Shoes\Index.cshtml" />
+    <Content Include="Views\Accessories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -382,6 +396,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711072333328_customer-required.resx">
       <DependentUpon>201711072333328_customer-required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712012125559_tables-Accessories-and-shoes.resx">
+      <DependentUpon>201712012125559_tables-Accessories-and-shoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712012149349_shoestype.resx">
+      <DependentUpon>201712012149349_shoestype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

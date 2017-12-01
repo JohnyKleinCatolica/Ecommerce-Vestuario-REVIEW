@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Ecommerce_Vestuario_REVIEW.Models.Shoes>
+
+@{
+    ViewBag.Title = "Sapatos";
+}
+
+<h2>Sapatos</h2>
+
+
+<div class="row">
+    @foreach (var shoe in Model)
+    {
+        <div class="col-xs-6 col-md-4">
+            <h1>@shoe.ShoesType</h1>
+            <a href="#" class="thumbnail">
+                <img src=@shoe.UrlImagem alt="Foto do produto" />
+            </a>
+
+            <div class="caption">
+                <p class="descricaoRegistro">
+                    <span><b>Referência:</b> @shoe.Id</span>
+                    <span><b>Cor:</b> @shoe.Cor</span>
+                    <span><b>Valor:</b> R$ @shoe.Preco,00</span>
+                </p>
+            </div>
+        </div>
+    }
+</div>
+

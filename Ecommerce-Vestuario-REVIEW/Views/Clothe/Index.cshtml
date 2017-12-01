@@ -15,16 +15,44 @@
                     <img src=@clothe.UrlImagem alt="Foto do produto"/>
                 </a>
 
-                <div class="caption">
+                <div class="caption" id="clothe">
                     <p class="descricaoRegistro">
                         <span><b>Referência:</b> @clothe.Id</span>
                         <span><b>Cor:</b> @clothe.Cor</span>
                         <span><b>Valor:</b> R$ @clothe.Preco,00</span>
+                        @Html.ActionLink("Editar", "Edit", new { clothe.Id }, new { @class = "glyphicon glyphicon-edit" })
+                        <span data-customer-id=@clothe.Id  class="js-delete btn-link glyphicon glyphicon-remove">Remover</span>
                     </p>
                 </div>
             </div>
     }
 </div>
+
+@section scripts
+{
+    <script>
+
+        $("#clothe").on("click", ".js-delete",
+           function () {
+               var button = $(this);
+               bootbox.confirm("Tem certeza que quer exluir o registro?", function (result) {
+                   if (result) {
+                       $.ajax({
+                           url: "/customer/delete/" + button.attr("data-customer-id"),
+                           method: "GET",
+                           success: function () {
+                               button.parents("tr").remove();
+                           }
+                       });
+                   }
+               });
+           });
+
+    </script>
+}
+
+
+
 
 
 
